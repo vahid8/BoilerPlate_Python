@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-#!/usr/bin/env python
 """ Get the user input including input images dir and send a message to the
     detection server, receive the detections as a list of string lines & save them
     into the output folder.
