@@ -1,3 +1,6 @@
+##### Table of Contents  
+[Naming](#Namings)  
+
 ### Namings
 ```
 Class name : All Upercase with No seperator e.g MyModel
@@ -6,7 +9,7 @@ functions, variables, Methods, Module : lowercase with _seperator e.g my_functio
 packages: lowercase with no sepeartor e.g mypackage
 ```
 
-###spaces
+### spaces
 ```
 Vertical spaces : 2 blank line between different classes and functions
                   1 blank line when you want to seperate different parts of codes to show clear steps
@@ -16,7 +19,7 @@ Horizontal: Maximum line length: 79 charachter
 Indentation: Use 4 spaces , prefare spaces over tabs
 ```
 
-###extended lines
+### extended lines
 ```sh
 1. withouth equal sign:
 def function(a,b
@@ -36,7 +39,7 @@ list_of_students = [
                  ]
 ```
             
-###comments
+### comments
 ```sh
 DocString (PEP257)
 1. one line: ''' solve problem of ... '''
@@ -44,3 +47,9 @@ DocString (PEP257)
                       when there is a ...
                       '''
 ```
+### data hiding
+```
+single underscore :  _hiddenvariable, it is a conventioon and does not stop external code from accessing them
+doucle underscore: __private_method or variable, it can be accessed externally only with _ClassName__private_method
+```
+
