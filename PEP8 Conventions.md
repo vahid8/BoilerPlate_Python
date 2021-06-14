@@ -1,9 +1,9 @@
 ##### Table of Contents  
 - [Naming](#Namings)  
-- [spaces](#Spaces)  
-- [extended lines](#Extended-lines) 
-- [comments](#Comments)
-- [data hiding](#data hiding) 
+- [Spaces](#Spaces)  
+- [Extended lines](#Extended-lines) 
+- [Comments](#Comments)
+- [Data hiding](#Data-hiding) 
 
 ### Namings
 ```
@@ -43,7 +43,7 @@ list_of_students = [
                  ]
 ```
             
-### comments
+### Comments
 ```sh
 DocString (PEP257)
 1. one line: ''' solve problem of ... '''
@@ -51,7 +51,7 @@ DocString (PEP257)
                       when there is a ...
                       '''
 ```
-### data hiding
+### Data hiding
 ```
 single underscore :  _hiddenvariable, it is a conventioon and does not stop external code from accessing them
 doucle underscore: __private_method or variable, it can be accessed externally only with _ClassName__private_method
