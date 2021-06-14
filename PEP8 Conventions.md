@@ -1,5 +1,8 @@
 ##### Table of Contents  
 [Naming](#Namings)  
+[spaces](#spaces) 
+[comments](#comments) 
+[data hiding](#data hiding) 
 
 ### Namings
 ```
