@@ -1,8 +1,9 @@
 ##### Table of Contents  
-[Naming](#Namings)  
-[spaces](#spaces) 
-[comments](#comments) 
-[data hiding](#data hiding) 
+- [Naming](#Namings)  
+- [spaces](#Spaces)  
+- [extended lines](#Extended-lines) 
+- [comments](#Comments)
+- [data hiding](#data hiding) 
 
 ### Namings
 ```
@@ -12,7 +13,7 @@ functions, variables, Methods, Module : lowercase with _seperator e.g my_functio
 packages: lowercase with no sepeartor e.g mypackage
 ```
 
-### spaces
+### Spaces
 ```
 Vertical spaces : 2 blank line between different classes and functions
                   1 blank line when you want to seperate different parts of codes to show clear steps
@@ -22,7 +23,7 @@ Horizontal: Maximum line length: 79 charachter
 Indentation: Use 4 spaces , prefare spaces over tabs
 ```
 
-### extended lines
+### Extended lines
 ```sh
 1. withouth equal sign:
 def function(a,b
