@@ -1,0 +1,5 @@
+# Input Directories
+input_path: "/media/vahid/Elements/Data/Liverpool/imgs"
+
+# Output Directories to save the images
+output_path: "/media/vahid/Elements/Data/Liverpool/img_all"
