@@ -1,4 +1,4 @@
-# Boiler_Python
+# Boilerplate_Python
 ## Shortcuts
 | Command | Description |
 | --- | --- |
