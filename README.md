@@ -11,11 +11,13 @@
 # Scripts description
 All handy scripts. Deciption of functions:
 - [Folder To Subfolders](#Folder_to_subfolders)
+- [read change json labels](#Read Change Json lables)
 
 
 | name | short description | 
 | --- | --- | 
 | Folder_to_subfolders | split files in a folder into subfolders |
+| read change json labels | read segmentation labels in json format and change desired label and also check typos |
 
 
 #### Folder_to_subfolders
