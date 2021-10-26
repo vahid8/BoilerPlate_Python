@@ -21,10 +21,10 @@
 
 ## Shortcuts GIS
 ` cluster points that are colser than a threshold distance together  
-from sklearn.cluster import DBSCAN  
-db = DBSCAN(eps=epsilon, min_samples=min_samples).fit(X)  
-labels = db.labels_  
-classified_points = {}  
+from sklearn.cluster import DBSCAN\ 
+db = DBSCAN(eps=epsilon, min_samples=min_samples).fit(X)\n
+labels = db.labels_
+classified_points = {}  &nbsp;
 for i in range(len(np.unique(labels))):  
     mask = np.where(labels == i)  
     classified_points[i] = X[mask]  
