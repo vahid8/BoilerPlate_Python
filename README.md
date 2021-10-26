@@ -20,14 +20,14 @@
 | `points3D = np.vstack((f.x, f.y, f.z)).transpose()` | From las files to numpy in n*3 format
 
 ## Shortcuts GIS
-` cluster points that are colser than a threshold distance together
-from sklearn.cluster import DBSCAN
-db = DBSCAN(eps=epsilon, min_samples=min_samples).fit(X)
-labels = db.labels_
-classified_points = {}
-for i in range(len(np.unique(labels))):
-    mask = np.where(labels == i)
-    classified_points[i] = X[mask]
+` cluster points that are colser than a threshold distance together\\
+from sklearn.cluster import DBSCAN\\
+db = DBSCAN(eps=epsilon, min_samples=min_samples).fit(X)\\
+labels = db.labels_\\
+classified_points = {}\\
+for i in range(len(np.unique(labels))):\\
+    mask = np.where(labels == i)\\
+    classified_points[i] = X[mask]\\
 `
 
 # Scripts description
