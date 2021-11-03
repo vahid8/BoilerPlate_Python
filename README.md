@@ -31,6 +31,24 @@ for i in range(len(np.unique(labels))):
     classified_points[i] = X[mask]  
 ```
 
+#### Write features to shapefiles
+``` 
+option1:
+left_edge_points = list(map(Point, all_points_3d_left_edge))
+gdf = geopandas.GeoDataFrame(geometry=left_edge_points)
+    if len(gdf) > 0:
+        gdf.to_file(os.path.join(output_folder, "shapefiles", "left_edge_points.shp"))
+option2:
+    with fiona.open(os.path.join(output_folder, "shapefiles", "left_edge_line.shp")
+            , 'w', 'ESRI Shapefile', {"geometry": "MultiLineString"}) as c:
+        ## If there are multiple geometries, put the "for" loop here
+        c.write({
+            'geometry': mapping(complete_edges),
+        })
+
+```
+
+
 # Scripts description
 All handy scripts. Deciption of functions:
 - [Folder To Subfolders](#Folder_to_subfolders)
