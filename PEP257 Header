@@ -24,21 +24,22 @@ Block description
 # open the files (block descriptions)
 # -------------------------------------------------
 
-Function documentation
-"""
-    Get 3D information using the point cloud projected on the image plane for each interseted point on the image
-    that are right and left line here
+def offset_points(xl: List[float], yl: List[float], shift_value: float, direction: str = "left") -> (List[float],
+                                                                                                     List[float]):
+    """
+        Get 3D information using the point cloud projected on the image plane for each interseted point on the image
+        that are right and left line here
 
-    Parameters
-    ----------
-    image_pts [numpy]: image points in image coordinate system (2D)
-    all_points_3d [list]: extracted 3D points from previous iterations (new data will be added to this)
-    partioned_points_2dimage_coordinate [list]: The pointcloud that are present in the image in image coordinate system (2D)
-    partioned_points_3dword_coordinate [list]: The pointcloud that are present in the image in word coordinate system (3D)
-    left: Boolean to check the road edge side
+        Parameters
+        ----------
+        image_pts [numpy]: image points in image coordinate system (2D)
+        all_points_3d [list]: extracted 3D points from previous iterations (new data will be added to this)
+        partioned_points_2dimage_coordinate [list]: The pointcloud that are present in the image in image coordinate system (2D)
+        partioned_points_3dword_coordinate [list]: The pointcloud that are present in the image in word coordinate system (3D)
+        left: Boolean to check the road edge side
 
-    Returns
-    --------
-    all_points_3d [numpy]: extracted 3D points from previous iterations + append new data
+        Returns
+        --------
+        all_points_3d [numpy]: extracted 3D points from previous iterations + append new data
 
-"""
+    """
