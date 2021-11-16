@@ -18,6 +18,9 @@
 | `np.linspace(min_value, max_value, num=int((max-min)/dist),endpoint=True)` | Create data or points between two number|
 | `np.min(points,axis =0),np.max(points,axis =0),np.mean(points,axis =0)` | Get Min, Max, Mean of points
 | `points3D = np.vstack((f.x, f.y, f.z)).transpose()` | From las files to numpy in n*3 format
+| `np.linalg.norm(ppts2d - np.array([x, y]), axis=1)` | Calc distance of a vec elements to a point
+| `diff_to_min = ppts2d - np.array([x, y])` | Calc difference of a vec elements to a point (signed)
+| `filter_axe = np.all(diff_to_min > 0, axis=1)` | find 2d points bigger than desired values in both x, y
 
 ## Shortcuts GIS
 #### cluster points that are colser than a threshold distance together 
