@@ -22,6 +22,13 @@
 | `diff_to_min = ppts2d - np.array([x, y])` | Calc difference of a vec elements to a point (signed)
 | `filter_axe = np.all(diff_to_min > 0, axis=1)` | find 2d points bigger than desired values in both x, y
 
+
+## Shortcuts Searching
+#### KDTree
+centers = np.array(centers)
+centers_tree = KDTree(centers) # create tree of centers
+nearest_dist, nearest_idx = centers_tree.query(cam_6degree["pos"][:2].reshape(1,2), k=4) # search for 4 NEAREST CENTERS to the cam pos
+    
 ## Shortcuts GIS
 #### cluster points that are colser than a threshold distance together 
 ``` 
