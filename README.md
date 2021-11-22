@@ -25,10 +25,12 @@
 
 ## Shortcuts Searching
 #### KDTree
+```
+from sklearn.neighbors import KDTree
 centers = np.array(centers)
 centers_tree = KDTree(centers) # create tree of centers
 nearest_dist, nearest_idx = centers_tree.query(cam_6degree["pos"][:2].reshape(1,2), k=4) # search for 4 NEAREST CENTERS to the cam pos
-    
+```
 ## Shortcuts GIS
 #### cluster points that are colser than a threshold distance together 
 ``` 
