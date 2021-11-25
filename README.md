@@ -4,15 +4,19 @@
 | Command | Description |
 | --- | --- |
 | `[item[0] for item in os.walk(path)` | get all dirs (inclouding route) and all child folders |
-| `a = np.empty((0,3), int)` | Create a new numpy for appending or stacking |
-| `img = np.zeros([100,100,3],dtype=np.uint8) then img.fill(255) # or img[:] = 255` | create an empty black or white image
 | `min = a if a < b else b` | Ternary operation
+
+## Shortcuts pytorch
+| Command | Description |
+| --- | --- |
+| `keypoints = outputs["instances"].pred_keypoints.to("cpu").detach().numpy()` | pytorch tensor to numpy |
 
 
 ## Shortcuts numpy
 | Command | Description |
 | --- | --- |
 | `a = np.empty((0,3), int)` | Create a new numpy for appending or stacking |
+| `img = np.zeros([100,100,3],dtype=np.uint8) then img.fill(255) # or img[:] = 255` | create an empty black or white image
 | `id_x = np.where((points[:,0] > x_min) & (points[:,0] < x_max))` | Get the id of desired part by filtering|
 | `id_x =  points[:,0] > x_min) & (points[:,0] < x_max` | Get boolean array to filter data|
 | `np.linspace(min_value, max_value, num=int((max-min)/dist),endpoint=True)` | Create data or points between two number|
