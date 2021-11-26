@@ -11,6 +11,12 @@
 | --- | --- |
 | `keypoints = outputs["instances"].pred_keypoints.to("cpu").detach().numpy()` | pytorch tensor to numpy |
 
+## Shortcuts opencv
+| Command | Description |
+| --- | --- |
+| `img = cv2.circle(img, center, radius=5, color=(0,0, 255), thickness=2)` | draw circle |
+| `img = cv2.rectangle(img, rect_start, rect_end, color=(0,0, 255), thickness=2)` | draw rectangle |
+
 
 ## Shortcuts numpy
 | Command | Description |
