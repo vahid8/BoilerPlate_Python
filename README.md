@@ -82,7 +82,7 @@ All handy scripts. Deciption of functions:
 | name | short description | 
 | --- | --- | 
 | Folder_to_subfolders | split files in a folder into subfolders |
-| read change json labels | read segmentation labels in json format and change desired label and also check typos |
+
 
 
 #### Folder_to_subfolders
