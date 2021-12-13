@@ -57,11 +57,16 @@ for i in range(len(np.unique(labels))):
 
 #### Write features to shapefiles
 ``` 
+from shapely.geometry import Polygon,Point
+import geopandas
+all_points_3d_left_edge = [[x1,y1,z1], ... , [xn,yn,zn]]
 option1:
 left_edge_points = list(map(Point, all_points_3d_left_edge))
 gdf = geopandas.GeoDataFrame(geometry=left_edge_points)
     if len(gdf) > 0:
         gdf.to_file(os.path.join(output_folder, "shapefiles", "left_edge_points.shp"))
+        # or to Geojson file
+        # gdf.to_file(os.path.join(output_folder, "shapefiles", "left_edge_points.geojason"), driver='GeoJSON')
 option2:
     with fiona.open(os.path.join(output_folder, "shapefiles", "left_edge_line.shp")
             , 'w', 'ESRI Shapefile', {"geometry": "MultiLineString"}) as c:
