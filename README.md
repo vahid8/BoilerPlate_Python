@@ -5,6 +5,7 @@
 | --- | --- |
 | `[item[0] for item in os.walk(path)` | get all dirs (inclouding route) and all child folders |
 | `min = a if a < b else b` | Ternary operation
+| `os.path.splitext("file.gzip.txt")[0])` | Get the filename without suffix (result here: file.gzip)
 
 ## Shortcuts pytorch
 | Command | Description |
