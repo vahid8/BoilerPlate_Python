@@ -55,6 +55,20 @@ for i in range(len(np.unique(labels))):
     mask = np.where(labels == i)  
     classified_points[i] = X[mask]  
 ```
+#### Reading and getting info about geodatabase using arcpy 
+``` 
+arcpy.env.workspace  =r"D:\EssenApp\output\ZEB1\ZEB_2019_2020_2\Bewertungsabschnitte_neu4_TUEV_1990.gdb"
+# print(f"print(arcpy.ListFeatureCLasses(aa)){arcpy.ListFeatureCLasses(aa)}")
+aa = arcpy.ListTables("*")
+bb = arcpy.ListFeatureClasses()
+print(f"arcpy.ListTables(){aa}")
+print(f"arcpy.ListFeatureClasses(){bb}")
+for feature in bb:
+    print(feature)
+    for f in arcpy.ListFields(feature):
+        print(f.name)  
+```
+
 
 #### Write features to shapefiles
 ``` 
