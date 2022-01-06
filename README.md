@@ -93,6 +93,44 @@ option2:
 ```
 
 
+#### Read shapefiles
+``` 
+import shapefile
+
+def read_shape_file(shp_path):
+    # -------------------------------------------------
+    # Read the shapefiles
+    # -------------------------------------------------
+    with shapefile.Reader(shp_path) as shp:
+        shp_data = list()
+        for i in range(shp.numRecords):
+            poly_3d = list()
+            lines_x_y = shp.shape(i).points
+            lines_z = shp.shape(i).z
+            bbox = list(shp.shape(i).bbox)
+            for num, item in enumerate(lines_x_y):
+                poly_3d.append([item[0], item[1], lines_z[num]])
+
+            #Create points in between before add to final result
+            poly_3d = expand_points(poly_3d)
+            shp_data.append([bbox, np.array(poly_3d, dtype=float)])
+
+        shp_dataframe = pd.DataFrame(shp_data, columns=["bbox", "points"])
+
+    return shp_dataframe
+
+```
+
+#### Read dbf
+``` 
+from simpledbf import Dbf5
+dbf = Dbf5(file_path)
+df = dbf.to_dataframe()
+```
+
+
+
+
 # Scripts description
 All handy scripts. Deciption of functions:
 - [Folder To Subfolders](#Folder_to_subfolders)
