@@ -121,6 +121,21 @@ def read_shape_file(shp_path):
 
 ```
 
+#### Write geojson 
+``` 
+import geojson
+
+aa = geojson.Feature(geometry=geojson.Point((100, 100, 0)),properties={"class": "im here"})
+bb = geojson.Feature(geometry=geojson.Point((200, 200, 500)),properties={"class": "there"})
+feature_collection = geojson.FeatureCollection([aa,bb])
+
+print(feature_collection)
+# write to output file
+with open("geodata.geojason", 'w') as f:
+    geojson.dump(feature_collection, f)
+```
+
+
 #### Read dbf
 ``` 
 from simpledbf import Dbf5
