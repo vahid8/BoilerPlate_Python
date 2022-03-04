@@ -14,10 +14,11 @@ path                             head                 tail
 'file.txt'                           {empty}            'file.txt'
 ```
 
-## Shortcuts pytorch
+## Shortcuts pandas
 | Command | Description |
 | --- | --- |
-| `keypoints = outputs["instances"].pred_keypoints.to("cpu").detach().numpy()` | pytorch tensor to numpy |
+| `grouped = gdf.groupby("poly_num")
+for name, group in grouped:` | Group and iterate |
 
 ## Shortcuts opencv
 | Command | Description |
