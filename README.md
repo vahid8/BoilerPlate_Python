@@ -17,8 +17,7 @@ path                             head                 tail
 ## Shortcuts pandas
 | Command | Description |
 | --- | --- |
-| `grouped = gdf.groupby("poly_num")
-for name, group in grouped:` | Group and iterate |
+| `grouped = gdf.groupby("poly_num") then for name, group in grouped:` | Group and iterate |
 
 ## Shortcuts opencv
 | Command | Description |
