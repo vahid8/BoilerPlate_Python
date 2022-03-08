@@ -18,6 +18,10 @@ path                             head                 tail
 | Command | Description |
 | --- | --- |
 | `grouped = gdf.groupby("poly_num") then for name, group in grouped:` | Group and iterate |
+| `df.drop(['B', 'C'], axis=1)` | drop columns B, C |
+| `df.drop([0, 5 ,6])` | drop rows 0, 5, 6 |
+| `group = pd.concat([group, new_df], ignore_index=True)` | append new df to existing df |
+| `dataframe['geometry'] = dataframe.apply(lambda row: Point(row.X, row.Y, row.Z), axis=1)` | Cretae new column based on other columns |
 
 ## Shortcuts opencv
 | Command | Description |
