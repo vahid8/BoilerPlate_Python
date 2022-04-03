@@ -85,4 +85,8 @@ path                             head                 tail
 ### Scripts description
 | name | short description | 
 | --- | --- | 
-| Folder_to_subfolders | split files in a folder into subfolders |
+| Folder_to_subfolders | Split files in a folder into subfolders based on custom file numbers |
+| subfolders_merger.py | merge different folders into one folder |
+| argParser.py | argparse example to get the user input as argument|
+| yaml_reader.py | yaml example to read the yaml file and a sample yaml file |
+ 
