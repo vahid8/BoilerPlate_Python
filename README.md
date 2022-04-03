@@ -89,4 +89,5 @@ path                             head                 tail
 | subfolders_merger.py | merge different folders into one folder |
 | argParser.py | argparse example to get the user input as argument|
 | yaml_reader.py | yaml example to read the yaml file and a sample yaml file |
+| merge_pdf_images.py | read pdf and images, convert them to each other and concat or split them |
  
