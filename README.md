@@ -60,6 +60,7 @@ use the following procedure to setup a new virtual env
 ### Shortcuts python
 | Command | Description |
 | --- | --- |
+| `[line.strip() for line in open(file_path,'r')]` | read the file as a list of lines
 | `[item[0] for item in os.walk(path)` | get all dirs (inclouding route) and all child folders |
 | `min = a if a < b else b` | Ternary operation
 | `os.path.splitext("file.gzip.txt")[0])` | Get the filename without suffix (result here: file.gzip)
