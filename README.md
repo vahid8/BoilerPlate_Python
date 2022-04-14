@@ -83,7 +83,7 @@ path                             head                 tail
 | `dataframe['geometry'] = dataframe.apply(lambda row: Point(row.X, row.Y, row.Z), axis=1)` | Cretae new column based on other columns |
 | `asbruch_df = dataframe[dataframe["class"] == "ausbruch"]` | filter based on a column value |
 
-### Shortcuts pandas
+### Shortcuts matplotlib
 plotting 4 images in a plt
 ```
 for idx in range(4):
