@@ -2,6 +2,7 @@
 - [python virtual env setup](#Python-virtual-env)
 - [Shortcuts python](#Shortcuts-python)
 - [Shortcuts pandas](#Shortcuts-pandas)
+- [Shortcuts matplotlib](#Shortcuts-matplotlib)
 - [Scripts description](#Scripts-description)
 
 ### Python Virtual Env
@@ -82,6 +83,17 @@ path                             head                 tail
 | `dataframe['geometry'] = dataframe.apply(lambda row: Point(row.X, row.Y, row.Z), axis=1)` | Cretae new column based on other columns |
 | `asbruch_df = dataframe[dataframe["class"] == "ausbruch"]` | filter based on a column value |
 
+### Shortcuts pandas
+plotting 4 images in a plt
+```
+for idx in range(4):
+    ax = plt.subplot(2, 2, idx + 1)
+    ax.imshow(images[idx])
+    ax.set_title(f"prediction: {class_dict[predictions[idx]]}\n target: {class_dict[targets[idx]]}")
+
+plt.tight_layout()
+plt.show()
+```
 
 ### Scripts description
 | name | short description | 
