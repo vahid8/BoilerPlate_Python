@@ -82,6 +82,7 @@ path                             head                 tail
 | `group = pd.concat([group, new_df], ignore_index=True)` | append new df to existing df |
 | `dataframe['geometry'] = dataframe.apply(lambda row: Point(row.X, row.Y, row.Z), axis=1)` | Cretae new column based on other columns |
 | `asbruch_df = dataframe[dataframe["class"] == "ausbruch"]` | filter based on a column value |
+| `df = df.filter(items = [index to keep], axis=0)` | Filter Pandas rows DataFrame Based on Index |
 
 ### Shortcuts matplotlib
 plotting 4 images in a plt
