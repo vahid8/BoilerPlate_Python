@@ -1,0 +1,6 @@
+# installation:
+1- you need to install Redis on your system. It will be used as message broker.
+2- create virtual env and install : Celery & redis using pip
+# Description
+my task will be run on the background and waits for the messages to do the computation and turn the results back
+Here there are two clients or consumers who request computations from my_task.

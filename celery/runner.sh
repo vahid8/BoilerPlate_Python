@@ -1,2 +1,3 @@
 source ../../env/bin/activate
-celery -A celery_tasks worker --loglevel=INFO
+celery  -A my_task worker  --loglevel=INFO
+
