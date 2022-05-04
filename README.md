@@ -79,6 +79,14 @@ path                             head                 tail
 'file.txt'                           {empty}            'file.txt'
 ```
 
+nametuple
+```
+import collections
+Car = collections.namedtuple('Car', ['color','mileage'])
+my_car = Car('red', 3812.4)
+print(my_car.color)
+```
+
 ### Shortcuts pandas
 | Command | Description |
 | --- | --- |
