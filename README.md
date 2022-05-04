@@ -78,7 +78,7 @@ path                             head                 tail
 | Command | Description |
 | --- | --- |
 | `grouped = gdf.groupby("poly_num") then for name, group in grouped:` | Group and iterate |
-| `df.drop(['B', 'C'], axis=1)` | drop columns B, C |
+| `df.drop(['B', 'C'], axis=1, inplace=True)` | drop columns B, C |
 | `df.drop([0, 5 ,6])` | drop rows 0, 5, 6 |
 | `group = pd.concat([group, new_df], ignore_index=True)` | append new df to existing df |
 | `dataframe['geometry'] = dataframe.apply(lambda row: Point(row.X, row.Y, row.Z), axis=1)` | Cretae new column based on other columns |
@@ -86,6 +86,12 @@ path                             head                 tail
 | `df = df.filter(items = [index to keep], axis=0)` | Filter Pandas rows DataFrame Based on Index |
 | `df.loc[0]` | row with index eqaul to 0 ( there should be a row with index 0 in dataframe to get result)|
 | `df.iloc[0]` | Get first row without looking at index (just first row), the index can be anything  |
+| `df['Date'] = pd.to_datetime(df['Date'])` | change date dtime to series to timeseries for plot |
+| `df.set_index('Date', inplace=True)` | Change the first column to index column |
+| `df.fillna(0, inplace=True)` | fill nan values with 0 |
+| `df = df.iloc[:,0:21].apply(pd.to_numeric)` | convert values from str to numeric
+| `df = df.cumsum()` | change the values of a specific column to cumulative sum |
+
 
 ### Shortcuts matplotlib
 plotting 4 images in a plt
