@@ -64,9 +64,14 @@ use the following procedure to setup a new virtual env
 | --- | --- |
 | `[line.strip() for line in open(file_path,'r')]` | read the file as a list of lines
 | `[item[0] for item in os.walk(path)` | get all dirs (inclouding route) and all child folders |
-| `min = a if a < b else b` | Ternary operation
 | `os.path.splitext("file.gzip.txt")[0])` | Get the filename without suffix (result here: file.gzip)
+| `pathlib.Path("file.gzip.txt").stem` | Get the filename without suffix (result here: file.gzip)
+| `pathlib.Path("media/file.txt").name` | Get the filename without path (result here: file.txt)
 | `os.path.split("path")` | split the path in head and tail
+| `min = a if a < b else b` | Ternary operation
+| `squares = list(map(lambda x: x ** 2, numbers))`| map
+| `evens = list(filter(lambda x: x % 2 == 0, numbers))` | filter
+| `product = reduce(lambda x, y: x * y, numbers)` | reduce
 ```example
 path                             head                 tail
 '/home/user/Desktop/file.txt'   '/home/user/Desktop/'   'file.txt'
