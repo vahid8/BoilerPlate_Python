@@ -3,6 +3,7 @@
 - [Shortcuts python](#Shortcuts-python)
 - [Shortcuts pandas](#Shortcuts-pandas)
 - [Shortcuts matplotlib](#Shortcuts-matplotlib)
+- [Shortcuts psql terminal](#Shortcuts-psql-terminal)
 - [Scripts description](#Scripts-description)
 
 ### Python Virtual Env
@@ -98,6 +99,23 @@ plt.tight_layout()
 plt.show()
 ```
 
+### Shortcuts psql terminal
+| Command | Description |
+| --- | --- |
+| sudo -u postgres psql | Enter postgres shel |
+| \l | list of databases |
+| \du | list of rules |
+| \c | see which databae we are connected to now |
+| \c mydatabase | connect to another database(mydatabase here) |
+| \dt | see list of available tables in current database that we are connected to | 
+| \d <table_name>|  see structure of the table |
+| DROP TABLE IF EXISTS customers CASCADE;| Drop a table from database |
+| DROP DATABASE <name>;| Drop a database |
+| ALTER TABLE customers ADD COLUMN phone VARCHAR; | add a new column to the existing database |
+| UPDATE customers SET contact_name = 'John Doe' WHERE id = 1; | change a value in the customers table in contact_name column and id 1 |
+| ALTER TABLE customers ALTER COLUMN contact_name SET NOT NULL; | change a specific column charachteristics |
+
+  
 ### Scripts description
 | name | short description | 
 | --- | --- | 
