@@ -63,8 +63,7 @@ use the following procedure to setup a new virtual env
 | Command | Description |
 | --- | --- |
 | `[line.strip() for line in open(file_path,'r')]` | read the file as a list of lines |
-| `with open("my_file.txt", "w") as f:
-        [f.write(line + "\n") for line in lines]` |  Write a list of (string)lines in to a file  |
+| `[open("my_file.txt", "w").write(line + "\n") for line in lines]` |  Write a list of (string)lines in to a file  |
 | `[item[0] for item in os.walk(path)` | get all dirs (inclouding route) and all child folders |
 | `os.path.splitext("file.gzip.txt")[0])` | Get the filename without suffix (result here: file.gzip)
 | `pathlib.Path("file.gzip.txt").stem` | Get the filename without suffix (result here: file.gzip)
