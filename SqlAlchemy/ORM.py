@@ -71,6 +71,9 @@ session.commit()
 result = session.query(Customers).all()
 for row in result:
    print ("id: ",row.id,"Name: ",row.name, "Address:",row.address, "Email:",row.email)
+#    db.session.selete(row) if you want to delete the row
+#    db.session.commit()
+
 
 # -------------------------------------------------
 # make query for a specific data in the table
@@ -109,7 +112,7 @@ session.query(Customers).filter(Customers.id != 2).update({Customers.name:"Mr."+
 
 '''
 There other keyword for filtering see a full list here:
-https://www.tutorialspoint.com/sqlalchemy/sqlalchemy_orm_filter_operators.htm
+https://flask-sqlalchemy.palletsprojects.com
 '''
 
 '''
