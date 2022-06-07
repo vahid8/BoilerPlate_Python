@@ -4,6 +4,7 @@
 - [Shortcuts pandas](#Shortcuts-pandas)
 - [Shortcuts matplotlib](#Shortcuts-matplotlib)
 - [Shortcuts psql terminal](#Shortcuts-psql-terminal)
+- [Shortcuts mongodb](#Shortcuts-mongodb)
 - [Scripts description](#Scripts-description)
 
 ### Python Virtual Env
@@ -134,6 +135,15 @@ plt.show()
 | ALTER TABLE customers ADD COLUMN phone VARCHAR; | add a new column to the existing database |
 | UPDATE customers SET contact_name = 'John Doe' WHERE id = 1; | change a value in the customers table in contact_name column and id 1 |
 | ALTER TABLE customers ALTER COLUMN contact_name SET NOT NULL; | change a specific column charachteristics |
+
+  
+### Shortcuts mongodb
+| Command | Description |
+| --- | --- |
+| sudo systemctl start mongod | start mongo db |
+| sudo systemctl status mongod | verify it has started |
+| sudo systemctl stop mongod  | stop it |
+| mongosh | begin using it |
 
   
 ### Scripts description
