@@ -163,6 +163,15 @@ plt.show()
 | db.createCollection(name, {autoIndexId: true}) | cretae collection with auto index |
 | show collections | show collections on current db |
 | db.COLLECTION_NAME.drop() |  drop a collection from current db | 
+| db.COLLECTION_NAME.find() | get all documents(records) inside a  collection |
+| db.COLLECTION_NAME.find().pretty() | show the result in a readbale format |
+| db.COLLECTION_NAME.findOne({"name": "vahid"}) | get only first documents(records) with the name vahid |
+| db.COLLECTION_NAME.find({"likes": {$lt:50}}).pretty() | filter documents with number of likes lt(less than 50) |
+| db.COLLECTION_NAME.find({"likes": {$lte:50}}).pretty() | filter documents with number of likes lte(less than and equal to 50) |
+| db.COLLECTION_NAME.find({"likes": {$gte:50}}).pretty() | filter documents with number of likes gte(greater than and equal to 50) |
+| db.COLLECTION_NAME.find({"likes": {$ne:50}}).pretty() | filter documents with number of likes ne(not equal to 50) |
+| db.COLLECTION_NAME.find({$and:[ {"likes": {$ne:50}}, {"name": "vahid"} ] }).pretty() | filter documents with number of likes ne(not equal to 50) and the name eqaul to vahid|
+| db.COLLECTION_NAME.find({$or:[ {"likes": {$ne:50}}, {"name": "vahid"} ] }).pretty() | filter documents with number of likes ne(not equal to 50) or the name eqaul to vahid|
   
 ### Scripts description
 | name | short description | 
