@@ -144,7 +144,25 @@ plt.show()
 | sudo systemctl status mongod | verify it has started |
 | sudo systemctl stop mongod  | stop it |
 | mongosh | begin using it |
-
+  
+ commands insisde the mongo sh   
+  
+| Command | Description |
+| --- | --- |
+| db.version() | check the version of mongo |
+| db.stats() | check avilable databses |
+| sudo systemctl status mongod | verify it has started |
+| sudo systemctl stop mongod  | stop it |
+| mongosh | begin using it |
+| use DataBASE_NAME | create a new database if not exist | 
+| db | check the current selelcted db |
+| db.movie.insertOne({"name": "vahid"}) | insert a document (record) to the database (here the movie collection) |
+| show dbs | show avilable dbs with at least one record in it |
+| db.dropDatabase() | delete the selected database |
+| db.createCollection(name, options) | cretae collection |
+| db.createCollection(name, {autoIndexId: true}) | cretae collection with auto index |
+| show collections | show collections on current db |
+| db.COLLECTION_NAME.drop() |  drop a collection from current db | 
   
 ### Scripts description
 | name | short description | 
