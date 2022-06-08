@@ -172,6 +172,16 @@ plt.show()
 | db.COLLECTION_NAME.find({"likes": {$ne:50}}).pretty() | filter documents with number of likes ne(not equal to 50) |
 | db.COLLECTION_NAME.find({$and:[ {"likes": {$ne:50}}, {"name": "vahid"} ] }).pretty() | filter documents with number of likes ne(not equal to 50) and the name eqaul to vahid|
 | db.COLLECTION_NAME.find({$or:[ {"likes": {$ne:50}}, {"name": "vahid"} ] }).pretty() | filter documents with number of likes ne(not equal to 50) or the name eqaul to vahid|
+| db.COLLECTION_NAME.find({},{KEY_1:1, KEY_2:0}) | show the result and only fields that are 1 (projection concept) |
+| db.COLLECTION_NAME.find({},{_id:0, 'title':1}) | show the title for all documents |
+| db.COLLECTION_NAME.find({},{_id:0, 'title':1}).limit(NUMBER) | show the title for only limited documents documents |
+| db.COLLECTION_NAME.find({}).sort({KEY:1}) | sort the result based on the key 1 means ascending and -1 means descending |
+| db.COLLECTION_NAME.update_one(SELECTION_CRITERIA, UPDATE_DATA) | update the data |
+| db.COLLECTION_NAME.update_one({'title': 'mySample'}, {$set:{'title': 'newTitle'}}) | update the data on first founded document |
+| db.COLLECTION_NAME.update_one({'title': 'mySample'}, {$set:{'title': 'newTitle'}} {multi: true}) | update the data on all founded documents |
+| db.COLLECTION_NAME.remove(DELETION_CRITERIA) | remove all documents with the criteria |
+| db.COLLECTION_NAME.remove({'title': 'mySample'}) | remove all documents with the title mySample |
+| db.COLLECTION_NAME.remove({DELETION_CRITERIA} {justOne:true}) | remove only one documents with the criteria |
   
 ### Scripts description
 | name | short description | 
