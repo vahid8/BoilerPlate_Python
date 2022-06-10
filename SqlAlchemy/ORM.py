@@ -53,6 +53,12 @@ c1 = Customers(name = 'Ravi Kumar', address='Station Road Nanded', email='ravi@g
 session.add(c1)
 session.commit()
 
+# -------------------------------------------------
+# delete a row
+# -------------------------------------------------
+query_result = session.query(Customers).get(2) # get customer with id 2
+session.delete(query_result)
+session.commit()
 
 # -------------------------------------------------
 # Add multiple row
