@@ -106,6 +106,7 @@ print(my_car.color)
 | `df.fillna(0, inplace=True)` | fill nan values with 0 |
 | `df = df.iloc[:,0:21].apply(pd.to_numeric)` | convert values from str to numeric
 | `df = df.cumsum()` | change the values of a specific column to cumulative sum |
+| `df = df.round({'X': 4, "Y": 4, "Z": 4})` | round column X, Y, Z to 4 Deci digits |
 
 
 ### Shortcuts matplotlib
