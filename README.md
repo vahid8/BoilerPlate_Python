@@ -132,6 +132,7 @@ plt.show()
 | \dt | see list of available tables in current database that we are connected to | 
 | \d <table_name>|  see structure of the table |
 | DROP TABLE IF EXISTS customers CASCADE;| Drop a table from database |
+| ALTER DATABASE name RENAME TO new_name; | Renmae the DB |
 | DROP DATABASE <name>;| Drop a database |
 | ALTER TABLE customers ADD COLUMN phone VARCHAR; | add a new column to the existing database |
 | UPDATE customers SET contact_name = 'John Doe' WHERE id = 1; | change a value in the customers table in contact_name column and id 1 |
