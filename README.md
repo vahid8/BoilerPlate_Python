@@ -45,19 +45,19 @@ use the following procedure to setup a new virtual env
 #### windows setup on cmd
   1. Install venv package using pip
       ```shell
-        $ pip install virtualenv
+        pip install virtualenv
       ```
   2. Make a new direvtory for creating files inside
       ```shell
-        $ mkdir my_env
+        mkdir my_env
       ```
   3. Create a virtual envirnment in this dir
       ```shell
-        $ py -m venv my_env
+        python -m venv my_env
       ```
   4. Acivate the envirnment
       ```shell
-        $ .\my_envScripts\activate
+        .\my_env\Scripts\activate
       ```
 
 ### Shortcuts python
