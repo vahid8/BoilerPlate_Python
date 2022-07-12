@@ -3,6 +3,7 @@
 - [Shortcuts python](#Shortcuts-python)
 - [Shortcuts pandas](#Shortcuts-pandas)
 - [Shortcuts matplotlib](#Shortcuts-matplotlib)
+- [Shortcuts laspy](#Shortcuts-laspy)
 - [Shortcuts psql terminal](#Shortcuts-psql-terminal)
 - [Shortcuts mongodb](#Shortcuts-mongodb)
 - [Scripts description](#Scripts-description)
@@ -119,6 +120,32 @@ for idx in range(4):
 
 plt.tight_layout()
 plt.show()
+```
+
+### Shortcuts laspy
+##### Open and read the file
+```
+with laspy.open("Test_LAS.las", mode='r') as open_file:
+    las = open_file.read()
+```
+##### Read xyz as an np array with shape (n,3)
+```
+points =las.xyz
+```
+
+##### see all available point properties 
+```
+ point_format = las.point_format
+ print(list(point_format.dimension_names))
+ # result : ['X', 'Y', 'Z', 'intensity', 'return_number', 'number_of_returns' ,... ]
+```
+##### filter and save base on classification
+```
+with laspy.open("Vahid_Test_LAS.las", mode='r') as open_file:
+    las = open_file.read()
+    new_file = laspy.create(point_format=las.header.point_format, file_version=las.header.version)
+    new_file.points = las.points[las.classification == 5]   
+    new_file.write("class_5.las")
 ```
 
 ### Shortcuts psql terminal
