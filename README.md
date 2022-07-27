@@ -100,6 +100,7 @@ print(my_car.color)
 | `dataframe['geometry'] = dataframe.apply(lambda row: Point(row.X, row.Y, row.Z), axis=1)` | Cretae new column based on other columns |
 | `asbruch_df = dataframe[dataframe["class"] == "ausbruch"]` | filter based on a column value |
 | `df = df.filter(items = [index to keep], axis=0)` | Filter Pandas rows DataFrame Based on Index |
+| `new_df = df[["image_name", "x", "y", "z", "H", "R", "P"]] | Filter pandas based on column names -> keep only what is necessary |
 | `df.loc[0]` | row with index eqaul to 0 ( there should be a row with index 0 in dataframe to get result)|
 | `df.iloc[0]` | Get first row without looking at index (just first row), the index can be anything  |
 | `df['Date'] = pd.to_datetime(df['Date'])` | change date dtime to series to timeseries for plot |
