@@ -122,6 +122,19 @@ for idx in range(4):
 plt.tight_layout()
 plt.show()
 ```
+plot 2d histogram of heights or intensity
+```
+    fig = plt.figure()
+    ax = fig.add_subplot()
+    surf = ax.scatter(x_points, y_points,s=0.1, c=z_points, cmap=cm.jet)
+    cbar = fig.colorbar(surf, shrink=0.5, aspect=5)
+    cbar.ax.set_xlabel('Height[m]')
+    ax.set_title(f"H_min[m]: {min_h}")
+    ax.plot(polygon3d[0], polygon3d[1], color="black", linewidth=2)
+    plt.savefig(os.path.join(out_dir, str(_id) + '_height.jpg'))
+    plt.close()
+
+```
 
 ### Shortcuts laspy
 ##### Open and read the file
