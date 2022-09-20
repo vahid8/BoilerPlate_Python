@@ -170,12 +170,9 @@ with laspy.open("Vahid_Test_LAS.las", mode='r') as open_file:
 | CREATE USER vahid WITH ENCRYPTED PASSWORD '123456'; | Create a new role |
 | ALTER USER vahid WITH SUPERUSER;| --- |
 | ALTER USER vahid WITH CREATEDB | --- |
-
 | \l | list of databases |
 | CREATE DATABASE myName OWNER vahid |  create a database called myName with the vahid ownership |
-| GRANT ALL PRIVILEGES ON DATABASE myName to vahid;|
-
-
+| GRANT ALL PRIVILEGES ON DATABASE myName to vahid;| --- |
 | \du | list of rules |
 | \c | see which databae we are connected to now |
 | \c mydatabase | connect to another database(mydatabase here) |
