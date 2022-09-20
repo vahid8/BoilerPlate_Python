@@ -166,10 +166,10 @@ with laspy.open("Vahid_Test_LAS.las", mode='r') as open_file:
 | Command | Description |
 | --- | --- |
 | sudo apt install postgis postgresql-12-postgis-3 | install postGIS for postgres-12 |
-| sudo -u postgres psql | Enter postgres shel |
+| sudo -u postgres psql | Enter postgres shel | ---- |
 | CREATE USER vahid WITH ENCRYPTED PASSWORD '123456'; | Create a new role |
-| ALTER USER vahid WITH SUPERUSER;|
-| ALTER USER vahid WITH CREATEDB |
+| ALTER USER vahid WITH SUPERUSER;| --- |
+| ALTER USER vahid WITH CREATEDB | --- |
 
 | \l | list of databases |
 | CREATE DATABASE myName OWNER vahid |  create a database called myName with the vahid ownership |
