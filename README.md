@@ -165,11 +165,21 @@ with laspy.open("Vahid_Test_LAS.las", mode='r') as open_file:
 ### Shortcuts psql terminal
 | Command | Description |
 | --- | --- |
+| sudo apt install postgis postgresql-12-postgis-3 | install postGIS for postgres-12 |
 | sudo -u postgres psql | Enter postgres shel |
+| CREATE USER vahid WITH ENCRYPTED PASSWORD '123456'; | Create a new role |
+| ALTER USER vahid WITH SUPERUSER;|
+| ALTER USER vahid WITH CREATEDB |
+
 | \l | list of databases |
+| CREATE DATABASE myName OWNER vahid |  create a database called myName with the vahid ownership |
+| GRANT ALL PRIVILEGES ON DATABASE myName to vahid;|
+
+
 | \du | list of rules |
 | \c | see which databae we are connected to now |
 | \c mydatabase | connect to another database(mydatabase here) |
+| CREATE EXTENSION postgis;| activate postGIS on the current database
 | \dt | see list of available tables in current database that we are connected to | 
 | \d <table_name>|  see structure of the table |
 | DROP TABLE IF EXISTS customers CASCADE;| Drop a table from database |
