@@ -179,6 +179,7 @@ with laspy.open("Vahid_Test_LAS.las", mode='r') as open_file:
 | CREATE EXTENSION postgis;| activate postGIS on the current database
 | \dt | see list of available tables in current database that we are connected to | 
 | \d <table_name>|  see structure of the table |
+| DELETE FROM "myTable"; | delete all records of a table |
 | DROP TABLE IF EXISTS customers CASCADE;| Drop a table from database |
 | ALTER DATABASE name RENAME TO new_name; | Renmae the DB |
 | DROP DATABASE <name>;| Drop a database |
