@@ -137,7 +137,7 @@ plot 2d histogram of heights or intensity
 
 ```
 
-### Shortcuts matplotlib
+### Shortcuts pathlib
 | Command | Description |
 | --- | --- |
 | `[item for item in input_dir.iterdir() if item.name.endswith(".las")]` | get files |
