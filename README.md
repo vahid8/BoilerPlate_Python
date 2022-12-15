@@ -3,6 +3,7 @@
 - [Shortcuts python](#Shortcuts-python)
 - [Shortcuts pandas](#Shortcuts-pandas)
 - [Shortcuts matplotlib](#Shortcuts-matplotlib)
+- [Shortcuts pathlib](#Shortcuts-pathlib)
 - [Shortcuts laspy](#Shortcuts-laspy)
 - [Shortcuts psql terminal](#Shortcuts-psql-terminal)
 - [Shortcuts mongodb](#Shortcuts-mongodb)
@@ -135,6 +136,15 @@ plot 2d histogram of heights or intensity
     plt.close()
 
 ```
+
+### Shortcuts matplotlib
+| Command | Description |
+| --- | --- |
+| `[item for item in input_dir.iterdir() if item.name.endswith(".las")]` | get files |
+| `if Path.PurePosixPath(cam_pos_path).suffixes[0] == ".shp"` | check suffix |
+
+
+
 
 ### Shortcuts laspy
 ##### Open and read the file
