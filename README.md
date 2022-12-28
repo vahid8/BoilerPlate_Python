@@ -176,6 +176,7 @@ with laspy.open("Vahid_Test_LAS.las", mode='r') as open_file:
 | Command | Description |
 | --- | --- |
 | sudo apt install postgis postgresql-12-postgis-3 | install postGIS for postgres-12 |
+| systemctl status postgresql or stop postgresql or start postgresql | to see the status, start or stop |
 | sudo -u postgres psql | Enter postgres shel | ---- |
 | CREATE USER vahid WITH ENCRYPTED PASSWORD '123456'; | Create a new role |
 | ALTER USER vahid WITH SUPERUSER;| --- |
