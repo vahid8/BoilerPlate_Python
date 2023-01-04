@@ -5,6 +5,7 @@
 - [Shortcuts matplotlib](#Shortcuts-matplotlib)
 - [Shortcuts pathlib](#Shortcuts-pathlib)
 - [Shortcuts laspy](#Shortcuts-laspy)
+- [shortcuts pcl] (#shortcuts-pcl)
 - [Shortcuts psql terminal](#Shortcuts-psql-terminal)
 - [Shortcuts mongodb](#Shortcuts-mongodb)
 - [Scripts description](#Scripts-description)
@@ -171,6 +172,14 @@ with laspy.open("Vahid_Test_LAS.las", mode='r') as open_file:
     new_file.points = las.points[las.classification == 5]   
     new_file.write("class_5.las")
 ```
+### Shortcuts pcl
+##### install ubuntu 20.04
+sudo apt-get install python3-pcl pcl-tools
+##### convert numpy to pcl object
+points = np.array([[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.0, 0.0, 1.0]], dtype=np.float32)
+cloud = pcl.PointCloud(points)
+for point in cloud:
+    print("(%f, %f, %f)" % (point[0], point[1], point[2]))
 
 ### Shortcuts psql terminal
 | Command | Description |
