@@ -139,6 +139,7 @@ plot 2d histogram of heights or intensity
 ```
 
 ### Shortcuts pathlib
+``` from pathlib import Path ```
 | Command | Description |
 | --- | --- |
 | `[item for item in input_dir.iterdir() if item.name.endswith(".las")]` | get files |
