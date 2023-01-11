@@ -144,6 +144,9 @@ plot 2d histogram of heights or intensity
 | --- | --- |
 | `[item for item in input_dir.iterdir() if item.name.endswith(".las")]` | get files |
 | `if Path.PurePosixPath(cam_pos_path).suffixes[0] == ".shp"` | check suffix |
+| `if Path("/path/to/file").is_file():` | check if the file exists |
+| `if Path("/path/to/file").is_dir():` | check if the dir exists |
+| `if Path("/path/to/file").exists():` | check if the path exist (file or dir) |
 
 
 
