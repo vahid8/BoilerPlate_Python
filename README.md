@@ -5,7 +5,7 @@
 - [Shortcuts matplotlib](#Shortcuts-matplotlib)
 - [Shortcuts pathlib](#Shortcuts-pathlib)
 - [Shortcuts laspy](#Shortcuts-laspy)
-- [shortcuts pcl] (#shortcuts-pcl)
+- [shortcuts pcl](#shortcuts-pcl)
 - [Shortcuts psql terminal](#Shortcuts-psql-terminal)
 - [Shortcuts mongodb](#Shortcuts-mongodb)
 - [Scripts description](#Scripts-description)
