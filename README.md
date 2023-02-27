@@ -77,6 +77,7 @@ use the following procedure to setup a new virtual env
 | `squares = list(map(lambda x: x ** 2, numbers))`| map
 | `evens = list(filter(lambda x: x % 2 == 0, numbers))` | filter
 | `product = reduce(lambda x, y: x * y, numbers)` | reduce
+| 'f"{my_num:03}"' | f-string formatting  assume my_num=1-> "001"|
 ```example
 path                             head                 tail
 '/home/user/Desktop/file.txt'   '/home/user/Desktop/'   'file.txt'
