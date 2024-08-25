@@ -3,7 +3,9 @@
 - [Shortcuts python](#Shortcuts-python)
 - [Shortcuts pandas](#Shortcuts-pandas)
 - [Shortcuts matplotlib](#Shortcuts-matplotlib)
+- [Shortcuts pathlib](#Shortcuts-pathlib)
 - [Shortcuts laspy](#Shortcuts-laspy)
+- [shortcuts pcl](#shortcuts-pcl)
 - [Shortcuts psql terminal](#Shortcuts-psql-terminal)
 - [Shortcuts mongodb](#Shortcuts-mongodb)
 - [Scripts description](#Scripts-description)
@@ -75,6 +77,7 @@ use the following procedure to setup a new virtual env
 | `squares = list(map(lambda x: x ** 2, numbers))`| map
 | `evens = list(filter(lambda x: x % 2 == 0, numbers))` | filter
 | `product = reduce(lambda x, y: x * y, numbers)` | reduce
+| `f"{my_num:03}"` | f-string formatting  assume my_num=1-> "001"|
 ```example
 path                             head                 tail
 '/home/user/Desktop/file.txt'   '/home/user/Desktop/'   'file.txt'
@@ -136,6 +139,19 @@ plot 2d histogram of heights or intensity
 
 ```
 
+### Shortcuts pathlib
+``` from pathlib import Path ```
+| Command | Description |
+| --- | --- |
+| `[item for item in input_dir.iterdir() if item.name.endswith(".las")]` | get files |
+| `if Path.PurePosixPath(cam_pos_path).suffixes[0] == ".shp"` | check suffix |
+| `if Path("/path/to/file").is_file():` | check if the file exists |
+| `if Path("/path/to/file").is_dir():` | check if the dir exists |
+| `if Path("/path/to/file").exists():` | check if the path exist (file or dir) |
+
+
+
+
 ### Shortcuts laspy
 ##### Open and read the file
 ```
@@ -161,11 +177,20 @@ with laspy.open("Vahid_Test_LAS.las", mode='r') as open_file:
     new_file.points = las.points[las.classification == 5]   
     new_file.write("class_5.las")
 ```
+### Shortcuts pcl
+##### install ubuntu 20.04
+sudo apt-get install python3-pcl pcl-tools
+##### convert numpy to pcl object
+points = np.array([[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.0, 0.0, 1.0]], dtype=np.float32)
+cloud = pcl.PointCloud(points)
+for point in cloud:
+    print("(%f, %f, %f)" % (point[0], point[1], point[2]))
 
 ### Shortcuts psql terminal
 | Command | Description |
 | --- | --- |
 | sudo apt install postgis postgresql-12-postgis-3 | install postGIS for postgres-12 |
+| systemctl status postgresql or stop postgresql or start postgresql | to see the status, start or stop |
 | sudo -u postgres psql | Enter postgres shel | ---- |
 | CREATE USER vahid WITH ENCRYPTED PASSWORD '123456'; | Create a new role |
 | ALTER USER vahid WITH SUPERUSER;| --- |
