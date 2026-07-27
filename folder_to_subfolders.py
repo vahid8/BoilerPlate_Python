@@ -9,7 +9,7 @@ import tqdm
 import shutil
 
 __author__ = "vahid jani"
-__copyright__ = "Copyright 2021, The Blurring Project"
+__copyright__ = "Copyright 2021"
 __credits__ = ["Vahid jani"]
 __license__ = "MIT"
 __version__ = "1.0.0"
